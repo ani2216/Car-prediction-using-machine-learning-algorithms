@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color: #f1f1f1;">
+        <form action="{{ url_for('predict')}}" method="POST">
+            <h1>Car Selling Prediction Analysis</h1>
+            <label>Year:</label><br>
+            <input id="first" name="Year" type="number ">
+            <br><br>
+            <label>Price You Buy(In lakhs):</label><br><input id="second" name="Present_Price" required="required"><br><br>
+            <label>Kilometers Drived(Km):</label><br><input id="third" name="Kms_Driven" required="required"><br><br>
+            <label>Owners previously had the car(0 or 1 or 3):</label></h3><br><input id="fourth" name="Owner" required="required"><br><br>
+            <label>Fuel type:</label><br><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+            </select><br><br>
+            <label>Are you A Dealer or Individual:</label><br><br><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select><br><br>
+            <label>Transmission type:</label><br><br><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select><br><br><br>
+            <button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br>
+      </form>
+
+
+
+        <br><br><h3>{{RESULT}}<h3>
+    </div>
+
+
+
+
+    <style>
+
+                body{
+                    background-color: rgba(0,0,0,0.7);
+                    text-align: center;
+                }
+
+                h1{
+                    text-align: center;
+                    text-decoration: underline;
+                }
+
+                input{
+                    background: transparent;
+                    border: none;
+                    border-bottom: 2px solid gray;
+                }
+
+                label{
+                    text-decoration: underline;
+                }
+
+                select{
+                    background: transparent;
+                }
+
+                button{
+                    background: transparent;
+                    box-shadow: 3px 3px 3px black;
+                    border: 2px solid white;
+                }
+    </style>
+</body>
+
+</html>
